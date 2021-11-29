@@ -13,7 +13,7 @@ const OrderForm = () => {
     const navigat = useNavigate();
 
     useEffect(() => {
-      const uri = `http://localhost:5000/service/${id}`;
+      const uri = `https://aqueous-hollows-73658.herokuapp.com/service/${id}`;
         fetch(uri)
         .then(res=>res.json())
         .then(data=>setOrders(data));
@@ -29,7 +29,7 @@ const OrderForm = () => {
           confirmButtonText: "Yes",
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch("http://localhost:5000/order", {
+            fetch("https://aqueous-hollows-73658.herokuapp.com/order", {
               method: "POST",
               headers: { "content-type": "application/json" },
               body: JSON.stringify({ ...data, ...orders }),

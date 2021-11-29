@@ -10,7 +10,7 @@ const Order = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/order?email=${user.email}`)
+    fetch(`https://aqueous-hollows-73658.herokuapp.com/order?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
@@ -27,7 +27,7 @@ const Order = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/placeorder/${id}`, {
+        fetch(`https://aqueous-hollows-73658.herokuapp.com/placeorder/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

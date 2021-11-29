@@ -7,7 +7,7 @@ const OrderPage = () => {
     const {id} = useParams();
 
     useEffect(() => {
-      const uri = `http://localhost:5000/service/${id}`;
+      const uri = `https://aqueous-hollows-73658.herokuapp.com/service/${id}`;
         fetch(uri)
         .then(res=>res.json())
         .then(data=>setOrders(data));

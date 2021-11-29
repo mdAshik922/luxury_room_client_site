@@ -12,7 +12,7 @@ const UserDashBoard = () => {
   
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user.email}`)
+    fetch(`https://aqueous-hollows-73658.herokuapp.com/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);

@@ -25,7 +25,7 @@ const TestimonialForm = () => {
         confirmButtonText: "Yes",
       }).then((result) => {
         if (result.isConfirmed) {
-          fetch("http://localhost:5000/review", {
+          fetch("https://aqueous-hollows-73658.herokuapp.com/review", {
             method: "post",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
