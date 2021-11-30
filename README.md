@@ -1,6 +1,6 @@
 # Getting Started with Luxury Room App
 
-This project was bootstrapped with [luxury room](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [luxury room](https://zen-nightingale-e54304.netlify.app).
 
 ## Available Scripts
 
