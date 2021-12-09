@@ -57,8 +57,8 @@ const Orders = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
-            if (data.deletedCount) {
+      
+            if (data.deletedCount > 0) {
               const modifiedOrders = orders.filter((order) => order._id !== id);
               setOrders(modifiedOrders);
               Swal.fire("Deleted!", "", "success");
