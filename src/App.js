@@ -21,6 +21,7 @@ import OrderPage from './Component/Pages/Dashboard/OrderPage/OrderPage';
 import About from './Component/Pages/About/About';
 import Projects from './Component/Pages/Projects/Projects';
 import AddProduct from './Component/Pages/AddProduct/AddProduct';
+import ManageProduct from './Component/Pages/Dashboard/ManageProduct/ManageProduct';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route  path="/dashBoard/testimonialForm" element={<PrivetRoute><TestimonialForm /></PrivetRoute>}/> 
             <Route  path="/dashBoard/makeAdmin" element={<AdminRoute><MakeAdmin/></AdminRoute>}/>
             <Route  path="/dashBoard/addProduct" element={<AdminRoute><AddProduct/></AdminRoute>}/>
+            <Route  path="/dashBoard/manageProduct" element={<AdminRoute><ManageProduct/></AdminRoute>}/>
               </Route>
 
          
