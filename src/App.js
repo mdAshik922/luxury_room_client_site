@@ -20,6 +20,7 @@ import Profile from './Component/Pages/Dashboard/Profile/Profile';
 import OrderPage from './Component/Pages/Dashboard/OrderPage/OrderPage';
 import About from './Component/Pages/About/About';
 import Projects from './Component/Pages/Projects/Projects';
+import AddProduct from './Component/Pages/AddProduct/AddProduct';
 
 function App() {
   return (
@@ -30,11 +31,12 @@ function App() {
           <Routes>
           <Route  path="/dashBoard" element={<UserDashBoard />}>
             <Route  exact path="/dashBoard" element={<PrivetRoute><Dashboard/></PrivetRoute>}/>
-            <Route path="/dashBoard/profile" element={<PrivetRoute><Profile /></PrivetRoute>}/>
-            <Route  path="/dashBoard/payment/:id" element={<PrivetRoute><Payment /></PrivetRoute>}/>
+            <Route path="/dashBoard/profile" element={<Profile />}/>
+            <Route  path="/dashBoard/payment/:id" element={<Payment />}/>
             <Route  path="/dashBoard/myorder" element={<Order/>}/>
             <Route  path="/dashBoard/testimonialForm" element={<TestimonialForm />}/> 
             <Route  path="/dashBoard/makeAdmin" element={<AdminRoute><MakeAdmin/></AdminRoute>}/>
+            <Route  path="/dashBoard/addProduct" element={<AdminRoute><AddProduct/></AdminRoute>}/>
               </Route>
 
          
@@ -44,7 +46,7 @@ function App() {
 
             <Route  path="/about" element={<PrivetRoute><About /></PrivetRoute>}/>
 
-            <Route path="/orderPage/:id" element={<OrderPage/>} />
+            <Route path="/orderPage/:id" element={<PrivetRoute><OrderPage/></PrivetRoute>} />
 
             <Route path="/login" element={<Login/>} />
 

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import initializetion from "../Firebase/Firebase.init";
 
 initializetion();
+
 const useFirebase = () => {
     const [ user, setUser] = useState({});
 const [loading, setLoading] = useState(true);
@@ -115,6 +116,7 @@ const saveUser = (email, displayName, method) => {
         user,
         admin,
         loading,
+        setLoading,
         error,
         token,
         register,

@@ -7,10 +7,10 @@ import './UserDashBoard.css';
 
 const UserDashBoard = () => {
    
-  const { user} = useAuth();
+  const { user, loading, setLoading} = useAuth();
   const [users, setUsers] = useState({});
   
-  const [loading, setLoading] = useState(true);
+  
   useEffect(() => {
     fetch(`https://aqueous-hollows-73658.herokuapp.com/users/${user.email}`)
       .then((res) => res.json())
@@ -45,7 +45,7 @@ const UserDashBoard = () => {
                     <h6 className="fw-bold text-uppercase">User Dashboard</h6>
                   )}
   
-                  {users?.admin !== "false" && (
+                  {users?.admin === false && (
                     <li className="sideBarLink">
                       <NavLink to="/dashBoard/profile">
                         <i className="fas fa-user-circle"></i> Profile
@@ -61,7 +61,7 @@ const UserDashBoard = () => {
                     </li>
                   )}
   
-                  {users?.admin !== "false" && (
+                  {users?.admin === false && (
                     <li className="sideBarLink">
                       <NavLink to="/dashBoard/myorder">
                         <i className="fas fa-cart-arrow-down"></i> My order
@@ -69,9 +69,17 @@ const UserDashBoard = () => {
                     </li>
                   )}
   
+                 {users?.admin === false && (
+                    <li className="sideBarLink">
+                      <NavLink to="/dashBoard/testimonialForm">
+                        <i className="fas fa-comment-dots"></i> Review
+                      </NavLink>
+                    </li>
+                  )}
+
                   {users?.admin === true && (
                     <li className="sideBarLink">
-                      <NavLink to="/addProduct">
+                      <NavLink to="/dashBoard/addProduct">
                         <i className="fas fa-file-medical"></i> Add Product
                       </NavLink>
                     </li>
@@ -83,7 +91,7 @@ const UserDashBoard = () => {
                       </NavLink>
                     </li>
                   )}
-                  {users?.admin !== "false" && (
+                  {users?.admin === false && (
                     <li className="sideBarLink">
                       <NavLink to="/dashBoard/payment/:id">
                         <i className="fab fa-amazon-pay"></i>Payment
@@ -97,13 +105,7 @@ const UserDashBoard = () => {
                       </NavLink>
                     </li>
                   )}
-                  {users?.admin === true && (
-                    <li className="sideBarLink">
-                      <NavLink to="/dashBoard/testimonialForm">
-                        <i className="fas fa-comment-dots"></i> Review
-                      </NavLink>
-                    </li>
-                  )}
+                
                 </ul>
               </div>
             </Col>

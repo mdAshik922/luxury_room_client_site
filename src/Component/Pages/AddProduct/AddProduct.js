@@ -10,7 +10,8 @@ import {
     InputGroup,
     Row,
   } from "react-bootstrap";
-  
+import './AddProduct.css';
+
 const AddProduct = () => {
     const navigate = useNavigate();
     const { register, handleSubmit, reset } = useForm();
@@ -24,7 +25,7 @@ const AddProduct = () => {
         confirmButtonText: "Yes",
       }).then((result) => {
         if (result.isConfirmed) {
-          fetch("http://localhost:5000/addProduct", {
+          fetch("https://aqueous-hollows-73658.herokuapp.com/addProduct", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
