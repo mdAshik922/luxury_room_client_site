@@ -33,7 +33,7 @@ function App() {
             <Route  exact path="/dashBoard" element={<PrivetRoute><Dashboard/></PrivetRoute>}/>
             <Route path="/dashBoard/profile" element={<PrivetRoute><Profile /></PrivetRoute>}/>
             <Route  path="/dashBoard/payment/:id" element={<PrivetRoute><Payment /></PrivetRoute>}/>
-            <Route  path="/dashBoard/myorder" element={<PrivetRoute><Order/></PrivetRoute>}/>
+            <Route  path="/dashBoard/myOrder" element={<PrivetRoute><Order/></PrivetRoute>}/>
             <Route  path="/dashBoard/testimonialForm" element={<PrivetRoute><TestimonialForm /></PrivetRoute>}/> 
             <Route  path="/dashBoard/makeAdmin" element={<AdminRoute><MakeAdmin/></AdminRoute>}/>
             <Route  path="/dashBoard/addProduct" element={<AdminRoute><AddProduct/></AdminRoute>}/>

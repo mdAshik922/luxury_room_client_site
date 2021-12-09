@@ -63,7 +63,7 @@ const UserDashBoard = () => {
   
                   {users?.admin === false && (
                     <li className="sideBarLink">
-                      <NavLink to="/dashBoard/myorder">
+                      <NavLink to="/dashBoard/myOrder">
                         <i className="fas fa-cart-arrow-down"></i> My order
                       </NavLink>
                     </li>
