@@ -52,11 +52,12 @@ const Orders = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://aqueous-hollows-73658.herokuapp.com/placeorder/${id}`, {
+        fetch(`https://aqueous-hollows-73658.herokuapp.com/deleteItem/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
           .then((data) => {
+            // console.log(data);
             if (data.deletedCount) {
               const modifiedOrders = orders.filter((order) => order._id !== id);
               setOrders(modifiedOrders);

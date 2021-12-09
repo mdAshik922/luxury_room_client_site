@@ -45,7 +45,7 @@ const UserDashBoard = () => {
                     <h6 className="fw-bold text-uppercase">User Dashboard</h6>
                   )}
   
-                  {users?.admin !== false && (
+                  {users?.admin !== "false" && (
                     <li className="sideBarLink">
                       <NavLink to="/dashBoard/profile">
                         <i className="fas fa-user-circle"></i> Profile
@@ -61,7 +61,7 @@ const UserDashBoard = () => {
                     </li>
                   )}
   
-                  {users?.admin !== false && (
+                  {users?.admin !== "false" && (
                     <li className="sideBarLink">
                       <NavLink to="/dashBoard/myorder">
                         <i className="fas fa-cart-arrow-down"></i> My order
@@ -83,7 +83,7 @@ const UserDashBoard = () => {
                       </NavLink>
                     </li>
                   )}
-                  {users?.admin !== false && (
+                  {users?.admin !== "false" && (
                     <li className="sideBarLink">
                       <NavLink to="/dashBoard/payment/:id">
                         <i className="fab fa-amazon-pay"></i>Payment

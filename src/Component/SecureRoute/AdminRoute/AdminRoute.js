@@ -5,9 +5,9 @@ import { useLocation, Navigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const AdminRoute = ({ children, ...rest }) => {
-    const { user, admin, isLoading } = useAuth();
+    const { user, admin, loading } = useAuth();
     const location = useLocation();
-    if (isLoading) { return <Spinner /> };
+    if (loading) { return <Spinner /> };
     if (user.email && admin) {
         return children;
     }

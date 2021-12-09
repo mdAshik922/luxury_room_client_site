@@ -6,8 +6,8 @@ import useAuth from '../../../Hooks/useAuth';
 
 const Order = () => {
   const { user } = useAuth();
-  const [orders, setOrders] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [ orders, setOrders ] = useState([]);
+  const [ loading, setLoading ] = useState(true);
 
   useEffect(() => {
     fetch(`https://aqueous-hollows-73658.herokuapp.com/order?email=${user.email}`)
@@ -27,11 +27,15 @@ const Order = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://aqueous-hollows-73658.herokuapp.com/placeorder/${id}`, {
-          method: "DELETE",
+        fetch(`https://aqueous-hollows-73658.herokuapp.com/deleteOrder/${id}`, {
+          method: 'DELETE',
+          headers: {
+              'content-type': 'application/json'
+          }
         })
           .then((res) => res.json())
           .then((data) => {
+            // console.log(data)
             if (data.deletedCount) {
               const modifiedOrders = orders.filter((order) => order._id !== id);
               setOrders(modifiedOrders);
@@ -55,7 +59,7 @@ const Order = () => {
       ) : (
         
         <Table hover borderless responsive>
-          <Toaster position="bottom-left" reverseOrder={false} />
+          <Toaster position="bottom-left" reverseOrder={ false } />
           <thead className="bg-light">
             <tr>
               <th>Image</th>
@@ -67,13 +71,13 @@ const Order = () => {
           </thead>
           {orders.map((order) => {
             return (
-              <tbody key={order._id} style={{ fontWeight: "500" }}>
+              <tbody key={ order._id } style={{ fontWeight: "500" }}>
                 <tr>
                   <td>
-                    <img width="100px" src={order.img} alt="" />
+                    <img width="100px" src={ order.img } alt="" />
                   </td>
-                  <td>{order.title}</td>
-                  <td>{order.desc}</td>
+                  <td>{ order.name }</td>
+                  
 
                   <td>
                     <button
@@ -86,7 +90,7 @@ const Order = () => {
                           : "btn btn-info"
                       }
                     >
-                      {order.status}
+                      { order.status }
                     </button>
                   </td>
                   <td>
@@ -102,9 +106,9 @@ const Order = () => {
                 </tr>
               </tbody>
             );
-          })}
+          })};
         </Table>
-      )}
+      )};
     </div>
   );
 };

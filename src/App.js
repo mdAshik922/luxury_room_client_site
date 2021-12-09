@@ -28,17 +28,16 @@ function App() {
         <BrowserRouter>
         <Header></Header>
           <Routes>
-          <Route  path="/dashBoard" element={<PrivetRoute><UserDashBoard /></PrivetRoute>}>
-            <Route  exact path="/dashBoard" element={<Dashboard/>}/>
-            <Route path="/dashBoard/profile" element={<Profile />}/>
-            <Route  path="/dashBoard/payment/:id" element={<Payment />}/>
+          <Route  path="/dashBoard" element={<UserDashBoard />}>
+            <Route  exact path="/dashBoard" element={<PrivetRoute><Dashboard/></PrivetRoute>}/>
+            <Route path="/dashBoard/profile" element={<PrivetRoute><Profile /></PrivetRoute>}/>
+            <Route  path="/dashBoard/payment/:id" element={<PrivetRoute><Payment /></PrivetRoute>}/>
             <Route  path="/dashBoard/myorder" element={<Order/>}/>
             <Route  path="/dashBoard/testimonialForm" element={<TestimonialForm />}/> 
             <Route  path="/dashBoard/makeAdmin" element={<AdminRoute><MakeAdmin/></AdminRoute>}/>
               </Route>
 
          
-
             <Route path="/home" element={<Home/>} />
 
             <Route path="/project" element={<Projects/>} />
