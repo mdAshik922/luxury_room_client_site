@@ -9,7 +9,7 @@ const OrderList = () => {
     console.log(orders);
   
     useEffect(() => {
-      fetch(`http://localhost:5000/order`)
+      fetch(`http://localhost:5000/orders`)
         .then((res) => res.json())
         .then((data) => {
           setOrders(data);
@@ -97,7 +97,7 @@ const OrderList = () => {
                     <td>{order.email}</td>
                     <td>{order.phone}</td>
                     <td>{order.address}</td>
-                    <td title={order.desc}>{order.desc.slice(0, 10)}...</td>
+                   
                     <td>
                       <Button
                         variant="outline-danger"
