@@ -51,7 +51,7 @@ const OrderList = () => {
         confirmButtonText: "Yes",
       }).then((result) => {
         if (result.isConfirmed) {
-          fetch(`https://rocky-cliffs-16368.herokuapp.com/placeorder/${id}`, {
+          fetch(`https://aqueous-hollows-73658.herokuapp.com/placeorder/${id}`, {
             method: "DELETE",
           })
             .then((res) => res.json())
