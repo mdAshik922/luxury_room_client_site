@@ -52,7 +52,7 @@ const OrderList = () => {
         confirmButtonText: "Yes",
       }).then((result) => {
         if (result.isConfirmed) {
-          fetch(`https://aqueous-hollows-73658.herokuapp.com/placeorder/${id}`, {
+          fetch(`https://aqueous-hollows-73658.herokuapp.com/placeOrder/${id}`, {
             method: "DELETE",
           })
             .then((res) => res.json())
@@ -85,7 +85,6 @@ const OrderList = () => {
                 <th>Email ID</th>
                 <th>Phone</th>
                 <th>Address</th>
-              
                 <th>Deletion</th>
                 <th>Status</th>
               </tr>
@@ -97,7 +96,6 @@ const OrderList = () => {
                     <td>{order.email}</td>
                     <td>{order.phone}</td>
                     <td>{order.address}</td>
-                  
                     <td>
                       <Button
                         variant="outline-danger"
