@@ -28,7 +28,7 @@ const OrderList = () => {
       setOrders(modifiedOrders);
       const modifiedStatus = { id, status };
   
-      fetch("https://rocky-cliffs-16368.herokuapp.com/updateOrderStatus", {
+      fetch("https://aqueous-hollows-73658.herokuapp.com/updateOrderStatus", {
         method: "put",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(modifiedStatus),
