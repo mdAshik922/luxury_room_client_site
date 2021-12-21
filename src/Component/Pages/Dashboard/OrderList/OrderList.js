@@ -45,7 +45,7 @@ const OrderList = () => {
         .catch((error) => toast.error(error.message));
     };
   
-    const deletion = (id) => {
+    const deleteOrder = (id) => {
       Swal.fire({
         title: "Are you sure to delete this order?",
         showCancelButton: true,
@@ -100,7 +100,7 @@ const OrderList = () => {
                       <Button
                         variant="outline-danger"
                         className="p-1 ml-3 mb-0"
-                        onClick={() => deletion(order._id)}
+                        onClick={() => deleteOrder(order._id)}
                       >
                         <i className="fas mx-1 fa-trash"></i>
                         Delete
