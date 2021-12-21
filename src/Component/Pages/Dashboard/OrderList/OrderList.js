@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Spinner, Table, Button } from "react-bootstrap";
 import toast, { Toaster } from "react-hot-toast";
 import Swal from "sweetalert2";
+
 const OrderList = () => {
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
     console.log(orders);
   
     useEffect(() => {
-      fetch(`https://aqueous-hollows-73658.herokuapp.com/order`)
+      fetch(`http://localhost:5000/order`)
         .then((res) => res.json())
         .then((data) => {
           setOrders(data);
@@ -81,7 +82,6 @@ const OrderList = () => {
             <Toaster position="bottom-left" reverseOrder={false} />
             <thead className="bg-light">
               <tr>
-                
                 <th>Email ID</th>
                 <th>Phone</th>
                 <th>Address</th>
@@ -94,7 +94,6 @@ const OrderList = () => {
               return (
                 <tbody key={order._id} style={{ fontWeight: "500" }}>
                   <tr>
-                   
                     <td>{order.email}</td>
                     <td>{order.phone}</td>
                     <td>{order.address}</td>
