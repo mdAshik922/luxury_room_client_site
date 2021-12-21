@@ -22,6 +22,7 @@ import About from './Component/Pages/About/About';
 import Projects from './Component/Pages/Projects/Projects';
 import AddProduct from './Component/Pages/AddProduct/AddProduct';
 import ManageProduct from './Component/Pages/Dashboard/ManageProduct/ManageProduct';
+import OrderList from './Component/Pages/Dashboard/OrderList/OrderList';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route  path="/dashBoard/testimonialForm" element={<PrivetRoute><TestimonialForm /></PrivetRoute>}/> 
             <Route  path="/dashBoard/makeAdmin" element={<AdminRoute><MakeAdmin/></AdminRoute>}/>
             <Route  path="/dashBoard/addProduct" element={<AdminRoute><AddProduct/></AdminRoute>}/>
+            <Route  path="/dashBoard/addProduct" element={<AdminRoute><OrderList/></AdminRoute>}/>
             <Route  path="/dashBoard/manageProduct" element={<AdminRoute><ManageProduct/></AdminRoute>}/>
               </Route>
 
