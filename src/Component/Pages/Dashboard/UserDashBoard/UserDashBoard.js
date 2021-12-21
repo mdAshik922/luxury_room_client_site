@@ -55,7 +55,7 @@ const UserDashBoard = () => {
   
                   {users?.admin === true && (
                     <li className="sideBarLink">
-                      <NavLink to="/dashBoard/manageOrderList">
+                      <NavLink to="/dashBoard/userOrderList">
                         <i className="fas fa-list"></i> Order List
                       </NavLink>
                     </li>
