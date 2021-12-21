@@ -8,7 +8,7 @@ const OrderList = () => {
     console.log(orders);
   
     useEffect(() => {
-      fetch(`https://aqueous-hollows-73658.herokuapp.com/orders`)
+      fetch(`https://aqueous-hollows-73658.herokuapp.com/order`)
         .then((res) => res.json())
         .then((data) => {
           setOrders(data);
@@ -81,7 +81,7 @@ const OrderList = () => {
             <Toaster position="bottom-left" reverseOrder={false} />
             <thead className="bg-light">
               <tr>
-                <th>Name</th>
+                
                 <th>Email ID</th>
                 <th>Phone</th>
                 <th>Address</th>
@@ -94,7 +94,7 @@ const OrderList = () => {
               return (
                 <tbody key={order._id} style={{ fontWeight: "500" }}>
                   <tr>
-                    <td>{order.name}</td>
+                   
                     <td>{order.email}</td>
                     <td>{order.phone}</td>
                     <td>{order.address}</td>
