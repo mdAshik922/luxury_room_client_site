@@ -9,7 +9,7 @@ const OrderList = () => {
     console.log(orders);
   
     useEffect(() => {
-      fetch(`http://localhost:5000/orders`)
+      fetch(`https://aqueous-hollows-73658.herokuapp.com/orders`)
         .then((res) => res.json())
         .then((data) => {
           setOrders(data);
