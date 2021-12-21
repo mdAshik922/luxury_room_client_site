@@ -85,7 +85,7 @@ const OrderList = () => {
                 <th>Email ID</th>
                 <th>Phone</th>
                 <th>Address</th>
-                <th>Product</th>
+              
                 <th>Deletion</th>
                 <th>Status</th>
               </tr>
@@ -97,7 +97,7 @@ const OrderList = () => {
                     <td>{order.email}</td>
                     <td>{order.phone}</td>
                     <td>{order.address}</td>
-                   
+                  
                     <td>
                       <Button
                         variant="outline-danger"
