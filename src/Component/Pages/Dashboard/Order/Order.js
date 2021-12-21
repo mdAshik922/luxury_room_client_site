@@ -64,7 +64,7 @@ const Order = () => {
             <tr>
               <th>Image</th>
               <th>Product</th>
-              <th>Brands</th>
+            
               <th>Status</th>
               <th>Deletion</th>
             </tr>
