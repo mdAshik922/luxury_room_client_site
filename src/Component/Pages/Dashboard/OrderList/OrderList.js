@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const OrderList = () => {
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
-    console.log(orders);
+ 
   
     useEffect(() => {
       fetch(`https://aqueous-hollows-73658.herokuapp.com/orders`)
