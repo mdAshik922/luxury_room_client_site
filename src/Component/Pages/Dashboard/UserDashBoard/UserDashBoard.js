@@ -22,7 +22,7 @@ const UserDashBoard = () => {
  
   if (loading) {
     return (
-      <div className="text-center my-5 private-spinner py-5">
+      <div className="text-center ">
         <Spinner variant="danger" animation="border" role="status">
           <span className="visually-hidden">Loading...</span>
         </Spinner>
