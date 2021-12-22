@@ -46,11 +46,7 @@ function App() {
          
             <Route path="/home" element={<Home/>} />
 
-            <Route path="/project" element={<Projects/>} />
-
-            <Route  path="/about" element={<PrivetRoute><About /></PrivetRoute>}/>
-
-            <Route path="/orderPage/:id" element={<PrivetRoute><OrderPage/></PrivetRoute>} />
+           
 
             <Route path="/login" element={<Login/>} />
 
