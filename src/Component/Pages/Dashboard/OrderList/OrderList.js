@@ -12,8 +12,7 @@ const OrderList = () => {
       fetch(`https://aqueous-hollows-73658.herokuapp.com/orders`)
         .then((res) => res.json())
         .then((data) => {
-          setOrders(data);
-          setLoading(false);
+         
         })
         .catch((error) => toast.error(error.message));
     }, []);
