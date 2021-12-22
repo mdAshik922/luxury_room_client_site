@@ -40,7 +40,7 @@ const UserDashBoard = () => {
               <div>
                 <ul>
                   {users?.admin === true ? (
-                    <h6 className="fw-bold text-uppercase"></h6>
+                    <h6 className="fw-bold text-uppercase">Admin Dashboard</h6>
                   ) : (
                     <h6 className="fw-bold text-uppercase">User Dashboard</h6>
                   )}
