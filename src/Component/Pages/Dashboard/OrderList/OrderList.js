@@ -52,7 +52,7 @@ const OrderList = () => {
         confirmButtonText: "Yes",
       }).then((result) => {
         if (result.isConfirmed) {
-          fetch(`manageOrder/${id}`, {
+          fetch(`https://aqueous-hollows-73658.herokuapp.com/manageOrder/${id}`, {
             method: "DELETE",
           })
             .then((res) => res.json())
