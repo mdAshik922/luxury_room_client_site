@@ -40,7 +40,7 @@ function App() {
             <Route  path="/dashBoard/makeAdmin" element={<AdminRoute><MakeAdmin/></AdminRoute>}/>
             <Route  path="/dashBoard/addProduct" element={<AdminRoute><AddProduct/></AdminRoute>}/>
             <Route  path="/dashBoard/userOrderList" element={<AdminRoute><OrderList/></AdminRoute>}/>
-            <Route  path="/dashBoard/manageProduct" element={<AdminRoute><ManageProduct/></AdminRoute>}/>
+           
               </Route>
 
          
