@@ -18,7 +18,7 @@ const UserDashBoard = () => {
         setUsers(data);
         setLoading(false);
       });
-  }, [user.email]);
+  }, []);
  
   if (loading) {
     return (
