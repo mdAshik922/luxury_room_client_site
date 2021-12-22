@@ -69,7 +69,7 @@ const OrderList = () => {
   
     return (
       <div className="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
-       
+        <h3 className="text-center mb-4 fw-bold">Manage all orders</h3>
         {loading ? (
           <div className="text-center my-5 private-spinner py-5">
             <Spinner variant="danger" animation="border" role="status">
