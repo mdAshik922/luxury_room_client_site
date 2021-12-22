@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 const OrderList = () => {
     const [orders, setOrders] = useState([]);
-    const [loading, setLoading] = useState();
+    const [loading, setLoading] = useState(true);
  
   
     useEffect(() => {
