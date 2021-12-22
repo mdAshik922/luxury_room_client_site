@@ -59,7 +59,7 @@ const OrderList = () => {
             .then((data) => {
               if (data.deletedCount > 0) {
                 const modifiedOrders = orders.filter((order) => order._id !== id);
-                
+                setOrders(modifiedOrders);
                 Swal.fire("Deleted!", "", "success");
               }
             });
