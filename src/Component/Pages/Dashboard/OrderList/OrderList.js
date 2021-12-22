@@ -47,7 +47,7 @@ const OrderList = () => {
   
     const deleteOrder = (id) => {
       Swal.fire({
-        title: "Are you sure to delete this order?",
+       
         showCancelButton: true,
         confirmButtonText: "Yes",
       }).then((result) => {
