@@ -75,7 +75,7 @@ const OrderList = () => {
             <Spinner variant="danger" animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
             </Spinner>
-          
+            <h6>Loading...</h6>
           </div>
         ) : (
           <Table hover borderless responsive>
