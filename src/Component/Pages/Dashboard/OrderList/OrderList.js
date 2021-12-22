@@ -38,8 +38,6 @@ const OrderList = () => {
         .then((data) => {
           if (data) {
             toast.success(<b style={{ color: "#198754" }}>Set to {status}</b>);
-          } else {
-            toast.error("something went wrong!");
           }
         })
         .catch((error) => toast.error(error.message));
