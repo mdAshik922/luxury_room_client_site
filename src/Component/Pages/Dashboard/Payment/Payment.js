@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import { Spinner, Table, Button } from "react-bootstrap";
+import { Spinner, Table, Button, Modal } from "react-bootstrap";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useFirebase";
 
 const Payment = () => {
     const { user } = useAuth();
   const [ paying, setPaying ] = useState([]);
+  const [modalShow, setModalShow] = React.useState(false);
+
   const [ loading, setLoading ] = useState(true);
+
 
   useEffect(() => {
     fetch(`https://aqueous-hollows-73658.herokuapp.com/order?email=${user.email}`)
@@ -66,6 +69,44 @@ const Payment = () => {
             })};
           </Table>
         )};
+
+    <Modal
+      
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Modal heading
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h4>Centered Modal</h4>
+        <p>
+          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+          consectetur ac, vestibulum at eros.
+        </p>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button >Close</Button>
+      </Modal.Footer>
+    </Modal>
+ 
+    <>
+      <Button variant="primary" onClick={() => setModalShow(true)}>
+        Launch vertically centered modal
+      </Button>
+
+      <Payment
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+    </>
+
+
+
       </div>
     );
 };
