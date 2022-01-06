@@ -43,7 +43,7 @@ const Payment = () => {
                        
                       >
                         <i className="fas mx-1 fa-trash"></i>
-                        pay
+                       
                       </Button>
                     </td>
                   </tr>
