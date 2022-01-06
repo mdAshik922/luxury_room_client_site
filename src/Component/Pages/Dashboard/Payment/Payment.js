@@ -2,9 +2,23 @@ import React, { useState, useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { Spinner, Table, Button } from "react-bootstrap";
 import Swal from "sweetalert2";
-import useAuth from '../../../Hooks/useAuth';
+import useAuth from "../../../Hooks/useFirebase";
 
 const Payment = () => {
+    const { user } = useAuth();
+  const [ paying, setPaying ] = useState([]);
+  const [ loading, setLoading ] = useState(true);
+
+  useEffect(() => {
+    fetch(`https://aqueous-hollows-73658.herokuapp.com/order?email=${user.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setPaying(data);
+        setLoading(false);
+      })
+      .catch((error) => toast.error(error.message));
+  }, [user.email]);
+
     return (
         <div className="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
         <h3 className="text-center fw-bold mb-4">My orders</h3>
@@ -27,7 +41,7 @@ const Payment = () => {
                 
               </tr>
             </thead>
-            {orders.map((payment) => {
+            {paying.map((payment) => {
               return (
                 <tbody key={ payment._id } style={{ fontWeight: "500" }}>
                   <tr>
