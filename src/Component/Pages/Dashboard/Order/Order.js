@@ -47,12 +47,12 @@ const Order = () => {
   };
 
   return (
-    <div className="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
-      <h3 className="text-center fw-bold mb-4">My orders</h3>
+    <div classNameName="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
+      <h3 classNameName="text-center fw-bold mb-4">My orders</h3>
       {loading ? (
-        <div className="text-center my-5 private-spinner py-5">
+        <div classNameName="text-center my-5 private-spinner py-5">
           <Spinner variant="danger" animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
+            <span classNameName="visually-hidden">Loading...</span>
           </Spinner>
           <h6>Loading...</h6>
         </div>
@@ -60,7 +60,7 @@ const Order = () => {
         
         <Table hover borderless responsive>
           <Toaster position="bottom-left" reverseOrder={ false } />
-          <thead className="bg-light">
+          <thead classNameName="bg-light">
             <tr>
               <th>Image</th>
               <th>Product</th>
@@ -81,7 +81,7 @@ const Order = () => {
                   <td>
                     <button
                       style={{ width: "100px" }}
-                      className={
+                      classNameName={
                         order.status === "Pending"
                           ? "btn btn-danger"
                           : order.status === "Done"
@@ -95,10 +95,10 @@ const Order = () => {
                   <td>
                     <Button
                       variant="outline-danger"
-                      className="p-1 ml-3 mb-0"
+                      classNameName="p-1 ml-3 mb-0"
                       onClick={() => deletion(order._id)}
                     >
-                      <i className="fas mx-1 fa-trash"></i>
+                      <i classNameName="fas mx-1 fa-trash"></i>
                       Delete
                     </Button>
                   </td>

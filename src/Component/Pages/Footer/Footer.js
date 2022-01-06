@@ -9,12 +9,12 @@ const Footer = () => {
     return (
         <section style={{backgroundColor: "black", color: "whitesmoke"}}>
             <div >
-  <div className="row">
-    <div style={{marginTop: "15px"}} className="col-sm">
+  <div classNameName="row">
+    <div style={{marginTop: "15px"}} classNameName="col-sm">
     <img width="10%" src={map} alt="map"/> H#000(oth Floor), Road #00.
      New DOHS, Mohakhali, Dhaka, Bangladesh
     </div>
-    <div style={{marginTop: "5px"}} className="col-sm">
+    <div style={{marginTop: "5px"}} classNameName="col-sm">
       <h3>Company</h3>
     <Link to="#" style={{ textDecoration: 'none', color:"whitesmoke" }}>About</Link>
     <br/>
@@ -27,7 +27,7 @@ const Footer = () => {
     <Link to="#" style={{ textDecoration: 'none', color:"whitesmoke" }}>Submit Listing</Link>
     
     </div>
-    <div style={{marginTop: "5px"}} className="col-sm">
+    <div style={{marginTop: "5px"}} classNameName="col-sm">
   <h3>Quick Links</h3>
   <Link to="#" style={{ textDecoration: 'none', color:"whitesmoke" }}>Quick Links</Link>
   <br/>
@@ -40,7 +40,7 @@ const Footer = () => {
   <Link to="#" style={{ textDecoration: 'none', color:"whitesmoke" }}>Our Blog</Link>
   <br/>
     </div>
-    <div style={{marginTop: "5px"}} className="col-sm">
+    <div style={{marginTop: "5px"}} classNameName="col-sm">
   <h3>About us</h3>
   <p>Bookyourluxuryhotelsuite.com is website with a mission to educate the public in 
     relation to luxury hotel suites. Luxury accommodations are our passions.</p>

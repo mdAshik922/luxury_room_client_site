@@ -7,23 +7,23 @@ const Profile = () => {
     const { user, logOut } = useAuth();
     return (
         <Container style={{ maxWidth: "30rem", marginBottom: "25px" }}>
-        <Card className="border-0 shadow">
-          <Card.Header as={"h4"} className="text-center border-0 mt-1">
+        <Card classNameName="border-0 shadow">
+          <Card.Header as={"h4"} classNameName="text-center border-0 mt-1">
             Profile
           </Card.Header>
-          <Card.Body className="card-body">
-            <div className="d-flex flex-column align-items-center text-center">
+          <Card.Body classNameName="card-body">
+            <div classNameName="d-flex flex-column align-items-center text-center">
               <img
                 src="https://i.ibb.co/5GzXkwq/user.png"
                 alt="Admin"
-                className="rounded-circle"
+                classNameName="rounded-circle"
                 width="150"
               />
-              <div className="mt-3">
+              <div classNameName="mt-3">
                 <h4>{ user.displayName }</h4>
-                <p className="text-secondary mb-1">{ user.email }</p>
+                <p classNameName="text-secondary mb-1">{ user.email }</p>
               </div>
-              <Button onClick={logOut} className="px-4 logout-btn btn-main">
+              <Button onClick={logOut} classNameName="px-4 logout-btn btn-main">
                 Logout
               </Button>
             </div>

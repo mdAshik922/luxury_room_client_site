@@ -46,12 +46,12 @@ const TestimonialForm = () => {
     return (
         <div>
              <h3 >Give a feedback</h3>
-             <Form onSubmit={handleSubmit(onSubmit)} className="w-100 form-main">
+             <Form onSubmit={handleSubmit(onSubmit)} classNameName="w-100 form-main">
         <div
-          className="p-3 mx-auto  bg-white"
+          classNameName="p-3 mx-auto  bg-white"
           style={{ borderRadius: "15px", maxWidth: "50rem" }}
         >
-          <Row className="justify-content-center">
+          <Row classNameName="justify-content-center">
             <Col md={6}>
               <Form.Group>
                 <Form.Label style={{ fontWeight: "bold" }}>
@@ -66,16 +66,16 @@ const TestimonialForm = () => {
               </Form.Group>
             </Col>
             <Col md={6}>
-              <h6 className="fw-bold mt-1 mb-2">Your Rating</h6>
+              <h6 classNameName="fw-bold mt-1 mb-2">Your Rating</h6>
               <Rating
-                className="text-warning fs-3"
+                classNameName="text-warning fs-3"
                 emptySymbol="far fa-star "
                 fullSymbol="fas fa-star "
                 onChange={(rate) => setRating(rate)}
                 initialRating={rating}
                 fractions={2}
               />
-              <h4 className="d-inline-block ms-2">{rating}</h4>
+              <h4 classNameName="d-inline-block ms-2">{rating}</h4>
             </Col>
           </Row>
           <Row style={{margin: "2px"}}>
@@ -107,7 +107,7 @@ const TestimonialForm = () => {
           <div style={{marginTop: "4px"}}>
             <Button
               type="submit"
-              className="btn-main"
+              classNameName="btn-main"
               style={{ padding: ".6rem 2rem" }}
             >
               Submit

@@ -26,16 +26,16 @@ const Testimonial = () => {
     return (
       <section
       style={{ overflow: "hidden" }}
-      className="testimonials p-md-3"
+      classNameName="testimonials p-md-3"
     >
       <Fade bottom duration={2500} distance="40px">
-        <div className="my-5 py-4">
-          <div className="review-title text-center">
+        <div classNameName="my-5 py-4">
+          <div classNameName="review-title text-center">
             <span>What Our Customer Says</span>
             <h2>Testimonials</h2>
           </div>
           {loading ? (
-            <div className="text-center">
+            <div classNameName="text-center">
               <Spinner animation="border" variant="danger" />
             </div>
           ) : (

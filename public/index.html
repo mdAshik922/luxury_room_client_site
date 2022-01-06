@@ -60,11 +60,11 @@
           slideChangeTransitionStart: function () {
             var slider = this;
             if (slider.activeIndex === 0) {
-              menuButton.classList.add("cross");
+              menuButton.classNameList.add("cross");
               // required because of slideToClickedSlide
               menuButton.removeEventListener("click", openMenu, true);
             } else {
-              menuButton.classList.remove("cross");
+              menuButton.classNameList.remove("cross");
             }
           },
           slideChangeTransitionEnd: function () {

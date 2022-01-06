@@ -50,15 +50,15 @@ const OrderForm = () => {
       <>
         
           <Container>
-            <Row className="align-items-center">
+            <Row classNameName="align-items-center">
            
-              <Col className="my-4" sm={12} md={6}>
-                <h2 className="text-center feature">Please confirm order</h2>
-                <div className="mt-5">
+              <Col classNameName="my-4" sm={12} md={6}>
+                <h2 classNameName="text-center feature">Please confirm order</h2>
+                <div classNameName="mt-5">
        
                  
                   <form onSubmit={handleSubmit(onSubmit)}>
-                    <Row className="mt-3">
+                    <Row classNameName="mt-3">
                       <Col sm={12} md={6}>
                         <label htmlFor="name">
                           <b>Name</b>
@@ -67,7 +67,7 @@ const OrderForm = () => {
                           id="name"
                           required
                           type="text"
-                          className="form-control"
+                          classNameName="form-control"
                           {...register("name")}
                           defaultValue={ user.displayName }
                           placeholder="your name"
@@ -83,13 +83,13 @@ const OrderForm = () => {
                           type="email"
                           readOnly
                           defaultValue={ user.email }
-                          className="form-control"
+                          classNameName="form-control"
                           {...register("email")}
                           placeholder="your email"
                         />
                       </Col>
                     </Row>
-                    <Row className="my-4">
+                    <Row classNameName="my-4">
                       <Col>
                         <label htmlFor="address">
                           <b>Address</b>
@@ -98,13 +98,13 @@ const OrderForm = () => {
                           id="address"
                           required
                           type="text"
-                          className="form-control"
+                          classNameName="form-control"
                           {...register("address")}
                           placeholder="Enter your address"
                         />
                       </Col>
                     </Row>
-                    <Row className="my-4">
+                    <Row classNameName="my-4">
                       <Col>
                         <label htmlFor="phone">
                           <b>Phone</b>
@@ -113,7 +113,7 @@ const OrderForm = () => {
                           id="phone"
                           required
                           type="number"
-                          className="form-control"
+                          classNameName="form-control"
                           {...register("phone")}
                           placeholder="Enter your phone"
                         />
@@ -121,7 +121,7 @@ const OrderForm = () => {
                     </Row>
                     <input
                       value="Order Now"
-                      className="btn btn-primary"
+                      classNameName="btn btn-primary"
                       type="submit"
                     />
                   </form>

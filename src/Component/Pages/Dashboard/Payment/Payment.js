@@ -7,10 +7,8 @@ import useAuth from "../../../Hooks/useFirebase";
 const Payment = () => {
     const { user } = useAuth();
   const [ paying, setPaying ] = useState([]);
-  const [modalShow, setModalShow] = React.useState(false);
-
   const [ loading, setLoading ] = useState(true);
-
+  
 
   useEffect(() => {
     fetch(`https://aqueous-hollows-73658.herokuapp.com/order?email=${user.email}`)
@@ -23,12 +21,12 @@ const Payment = () => {
   }, [user.email]);
 
     return (
-        <div className="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
-        <h3 className="text-center fw-bold mb-4">My orders</h3>
+        <div classNameName="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
+        <h3 classNameName="text-center fw-bold mb-4">My orders</h3>
         {loading ? (
-          <div className="text-center my-5 private-spinner py-5">
+          <div classNameName="text-center my-5 private-spinner py-5">
             <Spinner variant="danger" animation="border" role="status">
-              <span className="visually-hidden">Loading...</span>
+              <span classNameName="visually-hidden">Loading...</span>
             </Spinner>
             <h6>Loading...</h6>
           </div>
@@ -36,7 +34,7 @@ const Payment = () => {
           
           <Table hover borderless responsive>
             <Toaster position="bottom-left" reverseOrder={ false } />
-            <thead className="bg-light">
+            <thead classNameName="bg-light">
               <tr>
                 <th>Image</th>
                 <th>Product</th>
@@ -56,11 +54,41 @@ const Payment = () => {
                     <td>
                       <Button
                         variant="outline-danger"
-                        className="p-1 ml-3 mb-0"
+                        classNameName="p-1 ml-3 mb-0"
                        
                       >
-                        <i className="fas mx-1 fa-trash"></i>
+                        <i classNameName="fas mx-1 fa-trash"></i>
                         pay
+                        <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+<button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
+<button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+
+<div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal-dialog">
+    <div className="modal-content">
+      <div className="modal-header">
+        <h5 className="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div className="modal-body">
+        <form>
+          <div className="mb-3">
+            <label for="recipient-name" className="col-form-label">Recipient:</label>
+            <input type="text" className="form-control" id="recipient-name"/>
+          </div>
+          <div className="mb-3">
+            <label for="message-text" className="col-form-label">Message:</label>
+            <textarea className="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div className="modal-footer">
+        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" className="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
                       </Button>
                     </td>
                   </tr>
@@ -70,40 +98,7 @@ const Payment = () => {
           </Table>
         )};
 
-    <Modal
-      
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button >Close</Button>
-      </Modal.Footer>
-    </Modal>
- 
-    <>
-      <Button variant="primary" onClick={() => setModalShow(true)}>
-        Launch vertically centered modal
-      </Button>
-
-      <Payment
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
-    </>
+  
 
 
 
