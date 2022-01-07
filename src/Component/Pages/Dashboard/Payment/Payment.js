@@ -6,10 +6,21 @@ import useAuth from "../../../Hooks/useFirebase";
 
 const Payment = () => {
     const { user } = useAuth();
+  const [ payments, setPayments ] = useState({});
   const [ paying, setPaying ] = useState([]);
   const [ loading, setLoading ] = useState(true);
   const {id} = useParams();
-  
+
+  useEffect(() => {
+    fetch(`https://aqueous-hollows-73658.herokuapp.com/order?email=${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setPaying(data);
+        setLoading(false);
+      })
+      .catch((error) => toast.error(error.message));
+  }, [id]);
+
   useEffect(() => {
     fetch(`https://aqueous-hollows-73658.herokuapp.com/order?email=${user.email}`)
       .then((res) => res.json())
@@ -50,9 +61,7 @@ const Payment = () => {
                       <img width="100px" src={ payment.img } alt="" />
                     </td>
                     <td>{ payment.name }</td>
-                    
                     <td>
-
                         <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Pay</button>
 
 <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
