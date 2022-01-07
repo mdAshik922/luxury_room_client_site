@@ -8,7 +8,7 @@ const ShowTestimonial = ({testimonial}) => {
         <div>
               <Card style={{ minHeight: "375px" }} >
       <Card.Img variant="top"  src={img} width="60" />
-      <Card.Body classNameName="text-center">
+      <Card.Body className="text-center">
         <h5>
           {name} <br />
           <span>{email}</span>
@@ -16,7 +16,7 @@ const ShowTestimonial = ({testimonial}) => {
         <h6>
           Raging:
           <Rating
-            classNameName="text-warning"
+            className="text-warning"
             emptySymbol="far fa-star"
             fullSymbol="fas fa-star"
             initialRating={rating}

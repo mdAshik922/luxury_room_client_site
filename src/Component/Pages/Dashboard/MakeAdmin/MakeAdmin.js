@@ -42,21 +42,21 @@ const MakeAdmin = () => {
           });
       };
     return (
-        <section classNameName="make-admin">
+        <section className="make-admin">
       <Form onSubmit={handleSubmit(onSubmit)}>
-        <h4 classNameName="text-center">Make a new admin</h4>
-        <div classNameName="p-2 mx-md-5  bg-white form-main d-flex justify-content-center">
+        <h4 className="text-center">Make a new admin</h4>
+        <div className="p-2 mx-md-5  bg-white form-main d-flex justify-content-center">
           <div>
             <Form.Label>
               <Form.Control
-                classNameName="rounded-0"
+                className="rounded-0"
                 type="text"
                 {...register("email", { required: true })}
                 placeholder="Email Address"
               />
             </Form.Label>
 
-            <Button type="submit" classNameName="rounded-0">
+            <Button type="submit" className="rounded-0">
               Add
             </Button>
           </div>

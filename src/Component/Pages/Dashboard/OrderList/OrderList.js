@@ -68,19 +68,19 @@ const OrderList = () => {
     };
   
     return (
-      <div classNameName="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
-        <h3 classNameName="text-center mb-4 fw-bold">Manage all orders</h3>
+      <div className="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
+        <h3 className="text-center mb-4 fw-bold">Manage all orders</h3>
         {loading ? (
-          <div classNameName="text-center my-5 private-spinner py-5">
+          <div className="text-center my-5 private-spinner py-5">
             <Spinner variant="danger" animation="border" role="status">
-            <span classNameName="visually-hidden">Loading...</span>
+            <span className="visually-hidden">Loading...</span>
             </Spinner>
             <h6>Loading...</h6>
           </div>
         ) : (
           <Table hover borderless responsive>
             <Toaster position="bottom-left" reverseOrder={false} />
-            <thead classNameName="bg-light">
+            <thead className="bg-light">
               <tr>
                 <th>Email ID</th>
                 <th>Phone</th>
@@ -99,16 +99,16 @@ const OrderList = () => {
                     <td>
                       <Button
                         variant="outline-danger"
-                        classNameName="p-1 ml-3 mb-0"
+                        className="p-1 ml-3 mb-0"
                         onClick={() => deleteOrder(order._id)}
                       >
-                        <i classNameName="fas mx-1 fa-trash"></i>
+                        <i className="fas mx-1 fa-trash"></i>
                         Delete
                       </Button>
                     </td>
                     <td>
                       <select
-                        classNameName={
+                        className={
                           order.status === "Pending"
                             ? "btn btn-danger"
                             : order.status === "Done"
@@ -120,9 +120,9 @@ const OrderList = () => {
                           handleStatusChange(order._id, e.target.value)
                         }
                       >
-                        <option classNameName="bg-white text-muted">Pending</option>
-                        <option classNameName="bg-white text-muted">On going</option>
-                        <option classNameName="bg-white text-muted">Done</option>
+                        <option className="bg-white text-muted">Pending</option>
+                        <option className="bg-white text-muted">On going</option>
+                        <option className="bg-white text-muted">Done</option>
                       </select>
                     </td>
                   </tr>

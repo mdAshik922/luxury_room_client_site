@@ -26,7 +26,7 @@ import OrderList from './Component/Pages/Dashboard/OrderList/OrderList';
 
 function App() {
   return (
-    <div classNameName="App">
+    <div className="App">
      <AuthProvider>
         <BrowserRouter>
         <Header></Header>

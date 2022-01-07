@@ -21,12 +21,12 @@ const Payment = () => {
   }, [user.email]);
 
     return (
-        <div classNameName="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
-        <h3 classNameName="text-center fw-bold mb-4">My orders</h3>
+        <div className="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
+        <h3 className="text-center fw-bold mb-4">My orders</h3>
         {loading ? (
-          <div classNameName="text-center my-5 private-spinner py-5">
+          <div className="text-center my-5 private-spinner py-5">
             <Spinner variant="danger" animation="border" role="status">
-              <span classNameName="visually-hidden">Loading...</span>
+              <span className="visually-hidden">Loading...</span>
             </Spinner>
             <h6>Loading...</h6>
           </div>
@@ -34,7 +34,7 @@ const Payment = () => {
           
           <Table hover borderless responsive>
             <Toaster position="bottom-left" reverseOrder={ false } />
-            <thead classNameName="bg-light">
+            <thead className="bg-light">
               <tr>
                 <th>Image</th>
                 <th>Product</th>
@@ -52,16 +52,9 @@ const Payment = () => {
                     <td>{ payment.name }</td>
                     
                     <td>
-                      <Button
-                        variant="outline-danger"
-                        classNameName="p-1 ml-3 mb-0"
-                       
-                      >
-                        <i classNameName="fas mx-1 fa-trash"></i>
-                        pay
-                        <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
-<button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
-<button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+                    
+                        
+                        <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Pay</button>
 
 <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog">
@@ -89,7 +82,7 @@ const Payment = () => {
     </div>
   </div>
 </div>
-                      </Button>
+                  
                     </td>
                   </tr>
                 </tbody>

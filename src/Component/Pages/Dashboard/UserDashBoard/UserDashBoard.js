@@ -22,9 +22,9 @@ const UserDashBoard = () => {
  
   if (loading) {
     return (
-      <div classNameName="text-center my-5 private-spinner py-5">
+      <div className="text-center my-5 private-spinner py-5">
         <Spinner variant="danger" animation="border" role="status">
-          <span classNameName="visually-hidden">Loading...</span>
+          <span className="visually-hidden">Loading...</span>
         </Spinner>
         <h6>Loading...</h6>
       </div>
@@ -34,74 +34,74 @@ const UserDashBoard = () => {
     return (
         <div>
         
-        <div classNameName="mx-2 dashboard">
+        <div className="mx-2 dashboard">
           <Row>
-            <Col classNameName="admin-side-bar">
+            <Col className="admin-side-bar">
               <div>
                 <ul>
                   {users?.admin === true ? (
-                    <h6 classNameName="fw-bold text-uppercase">Admin Dashboard</h6>
+                    <h6 className="fw-bold text-uppercase">Admin Dashboard</h6>
                   ) : (
-                    <h6 classNameName="fw-bold text-uppercase">User Dashboard</h6>
+                    <h6 className="fw-bold text-uppercase">User Dashboard</h6>
                   )}
   
                   {users?.admin === false && (
-                    <li classNameName="sideBarLink">
+                    <li className="sideBarLink">
                       <NavLink to="/dashBoard/profile">
-                        <i classNameName="fas fa-user-circle"></i> Profile
+                        <i className="fas fa-user-circle"></i> Profile
                       </NavLink>
                     </li>
                   )}
   
                   {users?.admin === true && (
-                    <li classNameName="sideBarLink">
+                    <li className="sideBarLink">
                       <NavLink to="/dashBoard/userOrderList">
-                        <i classNameName="fas fa-list"></i> Order List
+                        <i className="fas fa-list"></i> Order List
                       </NavLink>
                     </li>
                   )}
   
                   {users?.admin === false && (
-                    <li classNameName="sideBarLink">
+                    <li className="sideBarLink">
                       <NavLink to="/dashBoard/myOrder">
-                        <i classNameName="fas fa-cart-arrow-down"></i> My order
+                        <i className="fas fa-cart-arrow-down"></i> My order
                       </NavLink>
                     </li>
                   )}
   
                  {users?.admin === false && (
-                    <li classNameName="sideBarLink">
+                    <li className="sideBarLink">
                       <NavLink to="/dashBoard/testimonialForm">
-                        <i classNameName="fas fa-comment-dots"></i> Review
+                        <i className="fas fa-comment-dots"></i> Review
                       </NavLink>
                     </li>
                   )}
 
                   {users?.admin === true && (
-                    <li classNameName="sideBarLink">
+                    <li className="sideBarLink">
                       <NavLink to="/dashBoard/addProduct">
-                        <i classNameName="fas fa-file-medical"></i> Add Product
+                        <i className="fas fa-file-medical"></i> Add Product
                       </NavLink>
                     </li>
                   )}
                   {users?.admin === true && (
-                    <li classNameName="sideBarLink">
+                    <li className="sideBarLink">
                       <NavLink to="/dashBoard/makeAdmin">
-                        <i classNameName="fas fa-user-plus"></i>Make admin
+                        <i className="fas fa-user-plus"></i>Make admin
                       </NavLink>
                     </li>
                   )}
                   {users?.admin === false && (
-                    <li classNameName="sideBarLink">
+                    <li className="sideBarLink">
                       <NavLink to="/dashBoard/payment/:id">
-                        <i classNameName="fab fa-amazon-pay"></i>Payment
+                        <i className="fab fa-amazon-pay"></i>Payment
                       </NavLink>
                     </li>
                   )}
                   {users?.admin === true && (
-                    <li classNameName="sideBarLink">
+                    <li className="sideBarLink">
                       <NavLink to="/dashBoard/manageProduct">
-                        <i classNameName="fas fa-cog"></i> Manage Products
+                        <i className="fas fa-cog"></i> Manage Products
                       </NavLink>
                     </li>
                   )}
@@ -110,7 +110,7 @@ const UserDashBoard = () => {
                 </ul>
               </div>
             </Col>
-            <Col md={8} lg="9" classNameName="admin-container">
+            <Col md={8} lg="9" className="admin-container">
            <Outlet></Outlet>
             </Col>
           </Row>

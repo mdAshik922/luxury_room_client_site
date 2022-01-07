@@ -8,7 +8,7 @@ const ShowProject = ({project}) => {
         <div  style={{ margin: "3px"}}>
            
        
-  <Card.Img classNameName="zoom" style={{ width: '250px', height: "300px" }} variant="top" src={img} />
+  <Card.Img className="zoom" style={{ width: '250px', height: "300px" }} variant="top" src={img} />
  
   <Card.Body>
     <Card.Title>{name}</Card.Title>

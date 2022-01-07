@@ -16,7 +16,7 @@ const Header = () => {
   <Navbar.Brand to="/home"><img  width="35%" src={headLogo} alt=""/></Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav classNameName="me-auto"  style={{marginLeft: '15%'}}>
+    <Nav className="me-auto"  style={{marginLeft: '15%'}}>
       <Nav.Link as={HashLink}  to="/home#home">Home</Nav.Link>
       <Nav.Link as={HashLink}  to="/home#project">Project</Nav.Link>
       <Nav.Link as={Link} to="/about">About</Nav.Link>

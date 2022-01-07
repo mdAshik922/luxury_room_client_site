@@ -48,18 +48,18 @@ const ManageProduct = () => {
   
     return (
       <div
-        classNameName="px-3 pt-2 mx-md-4 bg-white"
+        className="px-3 pt-2 mx-md-4 bg-white"
         style={{ borderRadius: "15px" }}
       >
-        <h3 classNameName="text-center fw-bold mb-4">Manage all orders</h3>
+        <h3 className="text-center fw-bold mb-4">Manage all orders</h3>
   
         <Table hover borderless responsive>
-          <thead classNameName="bg-light">
+          <thead className="bg-light">
             <tr>
               <th>Service</th>
               <th>Description</th>
               <th>Price</th>
-              <th classNameName="text-center">Action</th>
+              <th className="text-center">Action</th>
             </tr>
           </thead>
           {products.map((product) => {
@@ -69,25 +69,25 @@ const ManageProduct = () => {
                   <td>{product.title}</td>
                   <td>{product.desc}</td>
                   <td>${product.price}</td>
-                  <td classNameName="text-center">
+                  <td className="text-center">
                     <Link to={`addProduct/${product._id}`}>
                       <Button
                         variant="outline-success"
-                        classNameName="p-1 me-2 mb-0"
+                        className="p-1 me-2 mb-0"
                         onClick={() => {}}
                       >
-                        <i classNameName="fas fa-edit  mx-1"></i>
+                        <i className="fas fa-edit  mx-1"></i>
                         Edit
                       </Button>
                     </Link>
                     <Button
                       variant="outline-danger"
-                      classNameName="p-1 ml-3 mb-0"
+                      className="p-1 ml-3 mb-0"
                       onClick={() => {
                         deleteProduct(product._id);
                       }}
                     >
-                      <i classNameName="fas mx-1 fa-trash"></i>
+                      <i className="fas mx-1 fa-trash"></i>
                       Delete
                     </Button>
                   </td>

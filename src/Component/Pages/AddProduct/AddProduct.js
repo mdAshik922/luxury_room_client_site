@@ -55,15 +55,15 @@ const AddProduct = () => {
   
     return (
       <>
-        <section classNameName="add-service">
-          <h3 classNameName="text-center mb-3 fw-bold">Add a new product</h3>
+        <section className="add-service">
+          <h3 className="text-center mb-3 fw-bold">Add a new product</h3>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <div
-              classNameName="pb-5 mx-auto  bg-white form-main"
+              className="pb-5 mx-auto  bg-white form-main"
               style={{ borderRadius: "15px", maxWidth: "85rem" }}
             >
-              <Row classNameName="justify-content-center">
-                <Form.Group as={Col} md={6} sm={12} classNameName="mr-md-5">
+              <Row className="justify-content-center">
+                <Form.Group as={Col} md={6} sm={12} className="mr-md-5">
                   <Form.Label style={{ fontWeight: "bold" }}>
                     Service Title
                   </Form.Label>
@@ -85,15 +85,15 @@ const AddProduct = () => {
               </Row>
   
               <Row>
-                <InputGroup as={Col} classNameName="mb-3 mt-md-3">
+                <InputGroup as={Col} className="mb-3 mt-md-3">
                   <Form.Label
-                    classNameName="d-block w-100"
+                    className="d-block w-100"
                     style={{ fontWeight: "bold" }}
                   >
                     Phot URL
                   </Form.Label>
                   <InputGroup.Text id="basic-addon1">
-                    <i classNameName="fas fa-link"></i>
+                    <i className="fas fa-link"></i>
                   </InputGroup.Text>
                   <FormControl
                     id="upload"
@@ -104,7 +104,7 @@ const AddProduct = () => {
                 </InputGroup>
               </Row>
               <Row>
-                <Form.Group as={Col} md={12} sm={12} classNameName="mr-md-5 mt-md-3">
+                <Form.Group as={Col} md={12} sm={12} className="mr-md-5 mt-md-3">
                   <Form.Label style={{ fontWeight: "bold" }}>
                     Description
                   </Form.Label>
@@ -118,8 +118,8 @@ const AddProduct = () => {
                 </Form.Group>
               </Row>
   
-              <div classNameName="text-center mt-4">
-                <Button type="submit" classNameName="submit-btn btn-main">
+              <div className="text-center mt-4">
+                <Button type="submit" className="submit-btn btn-main">
                   Submit
                 </Button>
               </div>
