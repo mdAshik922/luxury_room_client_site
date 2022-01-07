@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import { useParams } from 'react-router';
 import { Spinner, Table, Button, Modal } from "react-bootstrap";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useFirebase";
@@ -9,13 +10,12 @@ const Payment = () => {
   const [ payments, setPayments ] = useState({});
   const [ paying, setPaying ] = useState([]);
   const [ loading, setLoading ] = useState(true);
-  const {id} = useParams();
 
   useEffect(() => {
-    fetch(`https://aqueous-hollows-73658.herokuapp.com/order?email=${id}`)
+    fetch(`http://localhost:5000/order/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        setPaying(data);
+        console.log(data);
         setLoading(false);
       })
       .catch((error) => toast.error(error.message));
@@ -64,7 +64,7 @@ const Payment = () => {
                     <td>
                         <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Pay</button>
 
-<div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog">
     <div className="modal-content">
       <div className="modal-header">
@@ -75,11 +75,11 @@ const Payment = () => {
         <form>
           <div className="mb-3">
             <h3>${payment.price}</h3>
-            <label for="recipient-name" className="col-form-label">Recipient:</label>
+            <label htmlFor="recipient-name" className="col-form-label">Recipient:</label>
             <input type="text" className="form-control" id="recipient-name"/>
           </div>
           <div className="mb-3">
-            <label for="message-text" className="col-form-label">Message:</label>
+            <label htmlFor="message-text" className="col-form-label">Message:</label>
             <textarea className="form-control" id="message-text"></textarea>
           </div>
         </form>

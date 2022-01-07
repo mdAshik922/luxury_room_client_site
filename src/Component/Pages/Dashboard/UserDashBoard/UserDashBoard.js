@@ -93,7 +93,7 @@ const UserDashBoard = () => {
                   )}
                   {users?.admin === false && (
                     <li className="sideBarLink">
-                      <NavLink to="/dashBoard/payment/:id">
+                      <NavLink to="/dashBoard/payment">
                         <i className="fab fa-amazon-pay"></i>Payment
                       </NavLink>
                     </li>
