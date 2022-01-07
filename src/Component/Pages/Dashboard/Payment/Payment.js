@@ -52,8 +52,7 @@ const Payment = () => {
                     <td>{ payment.name }</td>
                     
                     <td>
-                    
-                        
+
                         <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Pay</button>
 
 <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -66,6 +65,7 @@ const Payment = () => {
       <div className="modal-body">
         <form>
           <div className="mb-3">
+            <h3>${payment.price}</h3>
             <label for="recipient-name" className="col-form-label">Recipient:</label>
             <input type="text" className="form-control" id="recipient-name"/>
           </div>
@@ -82,7 +82,6 @@ const Payment = () => {
     </div>
   </div>
 </div>
-                  
                     </td>
                   </tr>
                 </tbody>
