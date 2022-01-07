@@ -4,7 +4,7 @@ import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const ShowService = ({service}) => {
-    const { name, price, description, img, _id } = service;
+    const { name, price, description, img, _id } = service || {};
     return (
         <div style={{ margin: "3px"}}>
            

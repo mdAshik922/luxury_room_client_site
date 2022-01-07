@@ -4,7 +4,7 @@ import OrderForm from '../../Form/OrderForm/OrderForm';
 
 const OrderPage = () => {
     const [orders, setOrders] = useState({});
-    const {id} = useParams();
+   
 
     useEffect(() => {
       const uri = `https://aqueous-hollows-73658.herokuapp.com/service/${id}`;

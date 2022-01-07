@@ -8,8 +8,8 @@ const Payment = () => {
     const { user } = useAuth();
   const [ paying, setPaying ] = useState([]);
   const [ loading, setLoading ] = useState(true);
+  const {id} = useParams();
   
-
   useEffect(() => {
     fetch(`https://aqueous-hollows-73658.herokuapp.com/order?email=${user.email}`)
       .then((res) => res.json())
