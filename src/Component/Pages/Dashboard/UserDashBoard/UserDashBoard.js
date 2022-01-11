@@ -26,7 +26,7 @@ const UserDashBoard = () => {
         <Spinner variant="danger" animation="border" role="status">
           <span className="visually-hidden">Loading...</span>
         </Spinner>
-        <h6>Loading...</h6>
+        <h6>{loading}</h6>
       </div>
     );
   };
