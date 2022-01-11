@@ -32,7 +32,7 @@ const Payment = () => {
   }, [user.email]);
 
     return (
-        <section className="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
+        <div className="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
         <h3 className="text-center fw-bold mb-4">My orders</h3>
         {loading ? (
           <div className="text-center my-5 private-spinner py-5">
@@ -50,10 +50,10 @@ const Payment = () => {
                 <th>Image</th>
                 <th>Product</th>
                 <th>Payment</th>
-                
               </tr>
             </thead>
             {paying.map((payment) => {
+              
               return (
                 <tbody key={ payment._id } style={{ fontWeight: "500" }}>
                   <tr>
@@ -64,7 +64,7 @@ const Payment = () => {
                     <td>
                         <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Pay</button>
 
-<div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog">
     <div className="modal-content">
       <div className="modal-header">
@@ -99,7 +99,7 @@ const Payment = () => {
           </table>
         )};
 
-      </section>
+      </div>
     );
 };
 
