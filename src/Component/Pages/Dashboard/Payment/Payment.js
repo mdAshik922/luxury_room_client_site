@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { useParams } from 'react-router';
-import { Spinner, Table, Button, Modal } from "react-bootstrap";
+import { Spinner, Button, Modal } from "react-bootstrap";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useFirebase";
 
@@ -32,7 +32,7 @@ const Payment = () => {
   }, [user.email]);
 
     return (
-        <div className="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
+        <section className="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
         <h3 className="text-center fw-bold mb-4">My orders</h3>
         {loading ? (
           <div className="text-center my-5 private-spinner py-5">
@@ -43,7 +43,7 @@ const Payment = () => {
           </div>
         ) : (
           
-          <Table hover borderless responsive>
+          <table hover borderless responsive="true" hover="true" borderless="true">
             <Toaster position="bottom-left" reverseOrder={ false } />
             <thead className="bg-light">
               <tr>
@@ -96,14 +96,10 @@ const Payment = () => {
                 </tbody>
               );
             })};
-          </Table>
+          </table>
         )};
 
-  
-
-
-
-      </div>
+      </section>
     );
 };
 
