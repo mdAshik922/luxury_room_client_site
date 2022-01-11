@@ -54,11 +54,11 @@ const Order = () => {
           <Spinner variant="danger" animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
           </Spinner>
-          <h6>Loading...</h6>
+          <h6>{loading}</h6>
         </div>
       ) : (
         
-        <Table hover borderless responsive>
+        <table responsive="true" hover="true" borderless="true">
           <Toaster position="bottom-left" reverseOrder={ false } />
           <thead className="bg-light">
             <tr>
@@ -106,7 +106,7 @@ const Order = () => {
               </tbody>
             );
           })};
-        </Table>
+        </table>
       )};
     </div>
   );
