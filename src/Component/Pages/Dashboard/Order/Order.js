@@ -101,7 +101,7 @@ const Order = () => {
               </tbody>
             );
           })};
-        </>
+        </Table>
       )};
     </div>
   );
