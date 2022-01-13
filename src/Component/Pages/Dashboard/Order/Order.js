@@ -86,8 +86,7 @@ const Order = () => {
                           : order.status === "Done"
                           ? "btn btn-success"
                           : "btn btn-info"
-                      }
-                    >
+                      } >
                       { order.status }
                     </button>
                   </td>
