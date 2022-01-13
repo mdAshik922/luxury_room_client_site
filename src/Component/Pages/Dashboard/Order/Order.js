@@ -35,7 +35,7 @@ const Order = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            // console.log(data)
+           
             if (data.deletedCount) {
               const modifiedOrders = orders.filter((order) => order._id !== id);
               setOrders(modifiedOrders);
@@ -47,7 +47,7 @@ const Order = () => {
   };
 
   return (
-    
+
     <div className="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
       <h3 className="text-center fw-bold mb-4">My orders</h3>
       {loading ? (
