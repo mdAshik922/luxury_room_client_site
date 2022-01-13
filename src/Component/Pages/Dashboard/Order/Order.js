@@ -65,7 +65,7 @@ const Order = () => {
               <th>Image</th>
               <th>Product</th>
               <th>Status</th>
-              <th>Deletion</th>
+              
             </tr>
           </thead>
           {orders.map((order) => {
