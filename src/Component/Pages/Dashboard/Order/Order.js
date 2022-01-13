@@ -58,6 +58,7 @@ const Order = () => {
         </div>
       ) : (
         
+        
         <table responsive="true" hover="true" borderless="true">
           <Toaster position="bottom-left" reverseOrder={ false } />
           <thead className="bg-light">
