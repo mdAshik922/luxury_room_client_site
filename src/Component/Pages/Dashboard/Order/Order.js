@@ -35,7 +35,6 @@ const Order = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-           
             if (data.deletedCount) {
               const modifiedOrders = orders.filter((order) => order._id !== id);
               setOrders(modifiedOrders);
