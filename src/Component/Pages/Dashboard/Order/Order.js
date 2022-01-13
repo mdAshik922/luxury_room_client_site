@@ -76,7 +76,6 @@ const Order = () => {
                     <img width="100px" src={ order.img } alt="" />
                   </td>
                   <td>{ order.name }</td>
-                  
                   <td>
                     <button
                       style={{ width: "100px" }}
