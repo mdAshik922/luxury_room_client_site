@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import { Spinner, Button } from "react-bootstrap";
+import { Spinner, Table, Button } from "react-bootstrap";
 import Swal from "sweetalert2";
 import useAuth from '../../../Hooks/useAuth';
 
@@ -58,7 +58,7 @@ const Order = () => {
         </div>
       ) : (
         
-        <table responsive="true" hover="true" borderless="true">
+        <Table responsive hover borderless>
           <Toaster position="bottom-left" reverseOrder={ false } />
           <thead className="bg-light">
             <tr>
@@ -101,7 +101,7 @@ const Order = () => {
               </tbody>
             );
           })};
-        </table>
+        </Table>
       )};
     </div>
   );
