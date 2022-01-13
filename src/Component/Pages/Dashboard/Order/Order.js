@@ -77,7 +77,6 @@ const Order = () => {
                   </td>
                   <td>{ order.name }</td>
                   
-
                   <td>
                     <button
                       style={{ width: "100px" }}
