@@ -97,7 +97,7 @@ const Order = () => {
                       className="p-1 ml-3 mb-0"
                       onClick={() => deletion(order._id)}
                     >
-                      <i className="fas mx-1 fa-trash"></i>
+                      
                       Delete
                     </Button>
                   </td>
