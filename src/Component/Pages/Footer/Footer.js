@@ -52,7 +52,7 @@ const Footer = () => {
   </div>
 
 <div style={{marginTop: "15px"}}>
-<p >&copy;Copy right 2021</p>
+<p >Luxury-Living&copy;Copy right 2021</p>
 </div>
 </div>
         </section>
