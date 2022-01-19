@@ -48,7 +48,7 @@ return
         <input onBlur={handelClick} name="password" type="password"   placeholder="Your password"/>
         <br/>
         <br/>
-        <label>Confirm password</label>   <br/>
+        <label style={{fontWeight: "bold"}}>Confirm password</label>   <br/>
         <input onBlur={handelClick} name="password2" type="password"   placeholder="Your confirm password"/>
         <br/>
         <br/>
