@@ -56,7 +56,7 @@ return
      
                 </form>
                 <br/>
-                <button onClick={signInUsingGoogle}><img style={{marginRight: "6%"}} width="15%" src={google} alt="google"/>Google Sign In</button>
+                <button style={{backgroundColor: "#4343c9b8", color: "white"}} onClick={signInUsingGoogle}><img style={{marginRight: "6%"}} width="15%" src={google} alt="google"/>Google Sign In</button>
       <p> <Link style={{textDecoration: "none", color: "red", fontSize: "1rem", fontWeight: "bold"}} to="/login">alredy have an account?</Link ></p>
            
            {user?.email && <Alert severity="success">User Created successfully!</Alert>}
