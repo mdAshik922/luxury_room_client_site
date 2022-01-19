@@ -31,7 +31,7 @@ return
     return (
 
         <div className='register-page-background'>
-            <h2 style={{color: "gold"}}>Register</h2>
+            <h2 style={{color: "#09872ac7"}}>Register</h2>
             
        <form onSubmit={handelSubmit}>
         
