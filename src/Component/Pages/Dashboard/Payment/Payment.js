@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { useParams } from 'react-router';
-import { Spinner, Button, Modal } from "react-bootstrap";
+import { Spinner, Button, Modal, Table } from "react-bootstrap";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useFirebase";
 
@@ -12,7 +12,7 @@ const Payment = () => {
   const [ loading, setLoading ] = useState(true);
 
   // useEffect(() => {
-  //   fetch(`http://localhost:5000/order/${id}`)
+  //   fetch(`http://localhost:5000/pay/${id}`)
   //     .then((res) => res.json())
   //     .then((data) => {
   //       console.log(data);
@@ -33,7 +33,7 @@ const Payment = () => {
 
     return (
         <div className="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
-        <h3 className="text-center fw-bold mb-4">My orders</h3>
+       <h3 className="text-center fw-bold mb-4">My orders</h3>
         {loading ? (
           <div className="text-center my-5 private-spinner py-5">
             <Spinner variant="danger" animation="border" role="status">
@@ -43,7 +43,7 @@ const Payment = () => {
           </div>
         ) : (
           
-          <table  responsive="true" hover="true" borderless="true">
+          <Table responsive hover borderless>
             <Toaster position="bottom-left" reverseOrder={ false } />
             <thead className="bg-light">
               <tr>
@@ -75,6 +75,7 @@ const Payment = () => {
         <form>
           <div className="mb-3">
             <h3>${payment.price}</h3>
+            <img width="100px" src={ payment.img } alt="product" />
             <label htmlFor="recipient-name" className="col-form-label">Recipient:</label>
             <input type="text" className="form-control" id="recipient-name"/>
           </div>
@@ -94,10 +95,11 @@ const Payment = () => {
                     </td>
                   </tr>
                 </tbody>
-              );
-            })};
-          </table>
-        )};
+              )
+            })
+            }
+          </Table>
+        )}
 
       </div>
     );

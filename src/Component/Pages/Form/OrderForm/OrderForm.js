@@ -29,6 +29,7 @@ const OrderForm = () => {
           confirmButtonText: "Yes",
         }).then((result) => {
           if (result.isConfirmed) {
+           
             fetch("https://aqueous-hollows-73658.herokuapp.com/order", {
               method: "POST",
               headers: { "content-type": "application/json" },
@@ -36,6 +37,7 @@ const OrderForm = () => {
             })
               .then((res) => res.json())
               .then((data) => {
+                
                 if (data.insertedId) {
                   reset();
                   Swal.fire("Confirmed!", "", "success");

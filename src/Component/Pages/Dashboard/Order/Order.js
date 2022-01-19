@@ -11,6 +11,7 @@ const Order = () => {
 
   useEffect(() => {
     fetch(`https://aqueous-hollows-73658.herokuapp.com/order?email=${user.email}`)
+    // fetch(`http://localhost:5000/order?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
@@ -36,7 +37,7 @@ const Order = () => {
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount) {
-              const modifiedOrders = orders.filter((order) => order._id !== id);
+              const modifiedOrders = orders.filter((order) => order._id !== id)
               setOrders(modifiedOrders);
               Swal.fire("Deleted!", "", "success");
             }
@@ -50,7 +51,7 @@ const Order = () => {
     <div className="px-2  mx-md-2 bg-white" style={{ borderRadius: "15px" }}>
       <h3 className="text-center fw-bold mb-4">My orders</h3>
       {loading ? (
-        <div className="text-center my-5 private-spinner py-5">
+        <div className="text-center my-5 py-5 private-spinner">
           <Spinner variant="danger" animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
           </Spinner>
@@ -73,7 +74,7 @@ const Order = () => {
               <tbody key={ order._id } style={{ fontWeight: "500" }}>
                 <tr>
                   <td>
-                    <img width="100px" src={ order.img } alt="" />
+                    <img width="100px" src={ order.img } alt="product" />
                   </td>
                   <td>{ order.name }</td>
                   <td>
@@ -89,8 +90,7 @@ const Order = () => {
                       { order.status } </button>
                   </td>
                   <td>
-                    <Button
-                      variant="outline-danger"
+                    <Button  variant="outline-danger"
                       className="p-1 ml-3 mb-0"
                       onClick={() => deletion(order._id)}>
                         <i className="fas mx-1 fa-trash"></i>
@@ -99,10 +99,10 @@ const Order = () => {
                   </td>
                 </tr>
               </tbody>
-            );
-          })};
+            )
+          })}
         </Table>
-      )};
+      )}
     </div>
   );
 };

@@ -16,8 +16,9 @@ const OrderPage = () => {
         <div>
             <h2>Please Order now</h2>
             <div>
-     <img src={orders.img} alt=""/>
-           <h2>{orders.name}</h2>
+     <img src={orders.img} alt="product"/>
+           <h3>{orders.name}</h3>
+           <h2>${orders.price}</h2>
             </div>
           <OrderForm></OrderForm>
         </div>
