@@ -44,11 +44,11 @@ const Login = () => {
         <input onBlur={handelClick} name="password" type="password"   placeholder="Your password"/>
        
         <br/>
-        <input type="submit" value="Submit"/>
+        <input style={{marginTop: "2%"}} type="submit" value="Submit"/>
      
                 </form>
 <br/>
-                <button onClick={signInUsingGoogle}><img width="15%" src={google} alt="google"/>Google Sign In</button>
+                <button style={{backgroundColor: "#4343c9b8", color: "white"}} onClick={signInUsingGoogle}><img style={{marginRight: "6%"}} width="15%" src={google} alt="google"/>Google Sign In</button>
       <p> New User ?<Link style={{textDecoration: "none"}} to="/register">Please register</Link ></p>
            
            {user?.email && <Alert severity="success">User Login successfully!</Alert>}
