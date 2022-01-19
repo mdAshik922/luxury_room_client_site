@@ -40,7 +40,7 @@ return
         
     <br/>
     <br/>
-        <label>Email</label>   <br/>
+        <label style={{fontWeight: "bold"}}>Email</label>   <br/>
         <input onBlur={handelClick} name="email" type="email"   placeholder="Your Email"/>
         <br/>
         <br/>
