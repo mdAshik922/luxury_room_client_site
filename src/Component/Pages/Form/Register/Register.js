@@ -3,6 +3,7 @@ import { Alert } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import google from './Group 573.png';
+import './register.css';
 
 const Register = () => {
     const [loginData, setLoginData] = useState({});
@@ -29,12 +30,12 @@ return
 
     return (
 
-        <div style={{backgroundColor: "gainsboro"}}>
+        <div className='register-page-background'>
             <h2 style={{color: "gold"}}>Register</h2>
             
        <form onSubmit={handelSubmit}>
         
-        <label>Name</label>   <br/>
+        <label style={{fontWeight: "bold"}}>Name</label>   <br/>
         <input onBlur={handelClick} type="text" name="name"  placeholder="Your name.."/>
         
     <br/>
@@ -56,7 +57,7 @@ return
                 </form>
                 <br/>
                 <button onClick={signInUsingGoogle}><img width="15%" src={google} alt="google"/>Google Sign In</button>
-      <p> <Link style={{textDecoration: "none"}} to="/login">alredy have an account?</Link ></p>
+      <p> <Link style={{textDecoration: "none", color: "red", fontSize: "1rem", fontWeight: "bold"}} to="/login">alredy have an account?</Link ></p>
            
            {user?.email && <Alert severity="success">User Created successfully!</Alert>}
                     {error && <Alert variant="danger">{error}</Alert>}
