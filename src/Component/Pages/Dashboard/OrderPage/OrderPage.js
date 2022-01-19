@@ -12,6 +12,7 @@ const OrderPage = () => {
         .then(res=>res.json())
         .then(data=>setOrders(data));
     },[id]);
+    
     return (
         <div>
             <h2>Please Order now</h2>
