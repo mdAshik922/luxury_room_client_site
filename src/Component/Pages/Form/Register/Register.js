@@ -44,7 +44,7 @@ return
         <input onBlur={handelClick} name="email" type="email"   placeholder="Your Email"/>
         <br/>
         <br/>
-        <label>password</label>   <br/>
+        <label style={{fontWeight: "bold"}}>password</label>   <br/>
         <input onBlur={handelClick} name="password" type="password"   placeholder="Your password"/>
         <br/>
         <br/>
