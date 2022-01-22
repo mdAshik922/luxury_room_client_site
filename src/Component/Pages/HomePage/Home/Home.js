@@ -5,14 +5,14 @@ import Testimonial from '../../Testimonial/Testimonial';
 import Banner from '../HomeBanner/Banner';
 
 const Home = () => {
+    
     return (
         <div id="home">
             <Banner></Banner>
             <Projects></Projects>
             <Service></Service>
             <Testimonial></Testimonial>
-           
-         
+
         </div>
     );
 };
