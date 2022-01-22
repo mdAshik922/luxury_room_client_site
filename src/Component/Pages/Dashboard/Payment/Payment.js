@@ -10,16 +10,17 @@ const Payment = () => {
   const [ payments, setPayments ] = useState({});
   const [ paying, setPaying ] = useState([]);
   const [ loading, setLoading ] = useState(true);
+const{Pay} = useParams();
 
-  // useEffect(() => {
-  //   fetch(`http://localhost:5000/pay/${id}`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //       setLoading(false);
-  //     })
-  //     .catch((error) => toast.error(error.message));
-  // }, [id]);
+  useEffect(() => {
+    fetch(`http://localhost:5000/pay/${Pay}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setLoading(false);
+      })
+      .catch((error) => toast.error(error.message));
+  }, [Pay]);
 
   useEffect(() => {
     fetch(`https://aqueous-hollows-73658.herokuapp.com/order?email=${user.email}`)

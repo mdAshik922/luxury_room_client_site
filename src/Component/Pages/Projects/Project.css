@@ -16,3 +16,13 @@
     -webkit-transform: scale(1.5); /* Safari 3-8 */
     transform: scale(1.1); 
   }
+
+  .show_project{
+    display: flex;
+       flex-wrap: wrap;
+       margin-left: auto;
+    margin-top: 5%;
+       margin-right: "auto";
+        justify-content: center;
+       align-content: center;
+  }
