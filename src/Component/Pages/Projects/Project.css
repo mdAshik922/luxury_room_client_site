@@ -5,7 +5,7 @@
 .zoom {
   padding: 20px;
   background-color: green;
-  transition: transform .2s;
+  transition: transform.2s;
   margin: 0 auto;
 }
 
