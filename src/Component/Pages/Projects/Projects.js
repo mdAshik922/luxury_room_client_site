@@ -11,7 +11,7 @@ useEffect(()=>{
 },[]);
     return (
         <div id="project">
-            <div style={{marginTop: "10%",  }}>
+            <div style={{marginTop: "10%"}}>
             <h2>Discover the latest interior Design Available today</h2>
         </div>
             <div data-aos="flip-left" className='show_project'>
