@@ -9,16 +9,17 @@ useEffect(()=>{
     .then(res=>res.json())
     .then(data => setProject(data))
 },[]);
+
     return (
         <div id="project">
-            <div style={{marginTop: "10%"}}>
+            <div style={{ marginTop: "10%" }}>
             <h2>Discover the latest interior Design Available today</h2>
         </div>
             <div data-aos="flip-left" className='show_project'>
                 {
                 projects.map(project =><ShowProject
-                key={project._id}
-                project={project}
+                key = { project._id }
+                project = { project }
                 ></ShowProject>)
                 }
             </div>
