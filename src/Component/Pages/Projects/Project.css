@@ -17,7 +17,7 @@
   transform: scale(1.1);
 }
 
-.show_project {
+.service {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

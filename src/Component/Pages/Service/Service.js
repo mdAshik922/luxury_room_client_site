@@ -15,7 +15,7 @@ useEffect(()=>{
                 <h3>We're an agency</h3>
                 <h3>clients'needs that always delivers </h3>
             </div>
-            <div style={{display: "flex", flexWrap: "wrap",  margin: "5%"}}>
+            <div className='service'>
                 {
                  services.map(service =><ShowService
                  key={service._id}
