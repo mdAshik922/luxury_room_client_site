@@ -6,7 +6,7 @@
   padding: 20px;
   background-color: green;
   transition: transform.2s;
-  margin: 0 auto;
+  margin: 0px auto;
 }
 
 .zoom:hover {
