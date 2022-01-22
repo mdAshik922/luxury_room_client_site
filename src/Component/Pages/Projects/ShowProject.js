@@ -5,7 +5,7 @@ const ShowProject = ({project}) => {
     const {name, img, location} = project;
 
     return (
-        <div  style={{ margin: "3px"}}>
+        <div  style={{ margin: "5px"}}>
            
        
   <Card.Img className="zoom" style={{ width: '250px', height: "300px" }} variant="top" src={img} />

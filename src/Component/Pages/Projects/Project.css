@@ -1,28 +1,28 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  .zoom {
-    padding: 20px;
-    background-color: green;
-    transition: transform .2s;
-    /* width: 200px;
-    height: 200px; */
-    margin: 0 auto;
-  }
-  
-  .zoom:hover {
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
-    transform: scale(1.1); 
-  }
+  box-sizing: border-box;
+}
 
-  .show_project{
-    display: flex;
-       flex-wrap: wrap;
-       margin-left: auto;
-    margin-top: 5%;
-       margin-right: "auto";
-        justify-content: center;
-       align-content: center;
-  }
+.zoom {
+  padding: 20px;
+  background-color: green;
+  transition: transform .2s;
+  /* width: 200px;
+    height: 200px; */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.5);
+  /* IE 9 */
+  -webkit-transform: scale(1.5);
+  /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+.show_project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin: 5% auto;
+}
