@@ -4,6 +4,7 @@ import { useParams } from 'react-router';
 import { Spinner, Button, Modal, Table } from "react-bootstrap";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useFirebase";
+import { Link } from 'react-router-dom';
 
 const Payment = () => {
     const { user } = useAuth();
@@ -12,15 +13,15 @@ const Payment = () => {
   const [ loading, setLoading ] = useState(true);
 const{Pay} = useParams();
 
-  useEffect(() => {
-    fetch(`http://localhost:5000/pay/${Pay}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setLoading(false);
-      })
-      .catch((error) => toast.error(error.message));
-  }, [Pay]);
+  // useEffect(() => {
+  //   fetch(`http://localhost:5000/pay/${Pay}`)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       setLoading(false);
+  //     })
+  //     .catch((error) => toast.error(error.message));
+  // }, [Pay]);
 
   useEffect(() => {
     fetch(`https://aqueous-hollows-73658.herokuapp.com/order?email=${user.email}`)
@@ -63,8 +64,7 @@ const{Pay} = useParams();
                     </td>
                     <td>{ payment.name }</td>
                     <td>
-                        <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Pay</button>
-
+                      <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Pay</button>
                         <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog">
     <div className="modal-content">
@@ -88,7 +88,7 @@ const{Pay} = useParams();
       </div>
       <div className="modal-footer">
         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" className="btn btn-primary">Send message</button>
+        <button type="button" className="btn btn-primary">Confirm</button>
       </div>
     </div>
   </div>

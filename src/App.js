@@ -52,7 +52,7 @@ function App() {
 
             <Route path="/orderPage/:id" element={<PrivetRoute><OrderPage/></PrivetRoute>} />
 
-            <Route path="/payment/:pay" element={<PrivetRoute><Payment/></PrivetRoute>} />
+            {/* <Route path="/payment/:pay" element={<PrivetRoute><Payment/></PrivetRoute>} /> */}
 
             <Route path="/login" element={<Login/>} />
 
