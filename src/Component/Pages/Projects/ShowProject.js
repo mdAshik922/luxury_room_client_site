@@ -2,7 +2,7 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import './Project.css';
 const ShowProject = ({project}) => {
-    const {name, img, location} = project;
+    const {name, img, location} = project || {};
 
     return (
         <div  style={{ margin: "5px"}}>
